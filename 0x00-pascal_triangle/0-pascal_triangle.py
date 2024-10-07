@@ -7,6 +7,7 @@ def pascal_triangle(n):
     """
     pascal = []
 
+    # return (trianlgle if n <= 0)
     if n <= 0:
         return pascal
     
@@ -14,7 +15,8 @@ def pascal_triangle(n):
         
         row = [1 if j == 0 or j == i else pascal[i-1][j-1] + pascal[i-1][j] for j in range(i + 1)]
         
-        pascal.append(row)  
-    
+        pascal.append(row) 
+
+    # print(triangle)
     return pascal
 
